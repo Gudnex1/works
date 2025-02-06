@@ -1,0 +1,177 @@
+@layer base {
+  :root {
+    --orange: #ff7b54;
+    --white: white;
+
+    /* this is very important */
+    html {
+      box-sizing: border-box;
+    }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+    body {
+      color: var(--white);
+      background-color: var(--orange);
+      font-family: sans-serif;
+      height: 100vh;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    a:hover {
+      color: rgba(184, 47, 6, 0.7);
+    }
+  }
+}
+@layer home {
+  .cont {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .nav {
+    display: flex;
+    max-width: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  }
+  .link {
+    display: none;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+  .dropdown,
+  .fa-cart-shopping {
+    align-self: center;
+    padding-inline: 1rem;
+    font-size: larger;
+  }
+  .dropdown {
+    padding-inline-start: 0;
+  }
+  .word {
+    width: 200px;
+    /* font-size: 50px; */
+    white-space: wrap;
+    line-height: 41px;
+    font-size: bold;
+    text-transform: capitalize;
+  }
+  .con {
+    align-self: center;
+  }
+}
+@layer bottons {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 200px;
+    margin-top: 70px;
+  }
+  .butt {
+    padding: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 20px;
+    transition: all 0.3s ease;
+  }
+  .button1 {
+    width: 150px;
+    background-color: var(--white);
+    color: var(--orange);
+    margin-bottom: 30px;
+  }
+  .button1:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #6b2b2b;
+    transform: scale(1.05);
+  }
+  .button2 {
+    width: 110px;
+    border: 2px solid var(--white);
+  }
+  .button2:hover {
+    background-color: rgba(241, 101, 58, 0.6);
+    color: #fff;
+    transform: scale(1.05);
+  }
+  .fa-arrow-right {
+    padding-inline-start: 5px;
+  }
+}
+@media (min-width: 800px) {
+  .cont {
+    max-width: 800px;
+    padding: 0 1rem 1rem 1rem;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 800px;
+    gap: -300px;
+  }
+  .dropdown {
+    display: none;
+  }
+  .link {
+    display: flex;
+    gap: 50px;
+  }
+  .con {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .links {
+    display: inline-block;
+    font-weight: 400;
+    font-size: larger;
+    transition: all 0.3s ease;
+    align-self: flex-end;
+  }
+  .fa-cart-shopping {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .word {
+    width: 400px;
+    white-space: wrap;
+    line-height: 71px;
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-weight: 400;
+  }
+  .date {
+    margin-top: -1px;
+    font-weight: 600;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .button1 {
+    width: 150px;
+    height: 22px;
+  }
+  .button2 {
+    width: 120px;
+    height: 18px;
+    border: 2px solid;
+  }
+  section {
+    margin-left: 2rem;
+  }
+}
